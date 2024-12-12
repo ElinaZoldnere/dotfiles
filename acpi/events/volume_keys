@@ -1,0 +1,12 @@
+event=button/mute
+action=pactl set-sink-mute @DEFAULT_SINK@ toggle
+
+event=button/volumedown
+action=pactl set-sink-volume @DEFAULT_SINK@ -10%
+
+event=button/volumeup
+action=pactl set-sink-volume @DEFAULT_SINK@ +10%
+
+event=button/f20
+action=pactl set-source-mute @DEFAULT_SOURCE@ toggle
+

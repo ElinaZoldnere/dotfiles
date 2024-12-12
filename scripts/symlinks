@@ -1,0 +1,17 @@
+#!/bin/bash
+DOTFILES_DIR=~/dotfiles
+
+# i3 general configuration
+echo "Creating symlink for i3 config..."
+mkdir -p ~/.config/i3
+ln -sf $DOTFILES_DIR/i3/config ~/.config/i3/config
+echo "Symlink created: ~/.config/i3/config -> $DOTFILES_DIR/i3/config"
+
+# volulme keys configuration (ThinkBook)
+echo "Creating symlink for volume keys config..."
+sudo mkdir -p /etc/acpi/events/
+sudo ln -sf $DOTFILES_DIR/acpi/events/volume_keys /etc/acpi/events/volume_keys
+echo "Symlink created: /etc/acpi/events/volume_keys -> $DOTFILES_DIR/acpi/events/volume_keys"
+echo "Restarting ACPI daemon..."
+sudo systemctl restart acpid
+echo "ACPI daemon restarted successfully."
