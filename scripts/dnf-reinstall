@@ -1,0 +1,23 @@
+#!/bin/bash
+
+# Reinstall packages manually installed via dnf
+echo "Reinstalling packages..."
+
+# Window manager and related tools
+sudo dnf install -y i3 i3status i3lock dmenu alacritty dunst xsecurelock lightdm
+
+# Localization
+sudo dnf install -y langpacks-lv
+
+# Utilities and tools
+sudo dnf install -y direnv light openssl
+
+# Docker and dependencies
+sudo dnf config-manager --add-repo=https://download.docker.com/linux/fedora/docker-ce.repo
+sudo dnf install -y docker-ce docker-ce-cli containerd.io docker-buildx-plugin
+
+# Zoom
+sudo dnf config-manager --add-repo=https://zoom.us/linux/rpm
+sudo dnf install -y zoom
+
+echo "Installation completed."
