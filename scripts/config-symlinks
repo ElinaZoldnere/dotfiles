@@ -15,3 +15,11 @@ echo "Symlink created: /etc/acpi/events/volume_keys -> $DOTFILES_DIR/acpi/events
 echo "Restarting ACPI daemon..."
 sudo systemctl restart acpid
 echo "ACPI daemon restarted successfully."
+
+#  .bashrc
+echo "Creating symlink for .bashrc..."
+ln -sf $DOTFILES_DIR/.bashrc ~/.bashrc
+echo "Symlink created: ~/.bashrc -> $DOTFILES_DIR/.bashrc"
+echo "Reloading .bashrc..."
+source ~/.bashrc
+echo ".bashrc reloaded successfully."
