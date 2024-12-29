@@ -23,3 +23,27 @@ The core principles behind this setup:
 
 This structure ensures that all configurations can be managed in a single, version-controlled repository,
  making it easy to replicate the environment on a new system.
+
+## How To Use
+1. **Clone the Repository:**
+```
+git clone https://github.com/ElinaZoldnere/dotfiles.git
+cd dotfiles
+```
+2. **Review and Customize:**
+   - **If you intend to use any of my configurations directly, carefully review configuration files and both 
+   `dnf-reinstall` and `config-symlinks` scripts and adapt them to match your system setup and preferences.**
+   - Back up existing configuration files before proceeding.
+3. **Install Necessary Software:**
+   - Run the `dnf-reinstall` script first to ensure the required software is installed before linking configuration files:
+```
+./scripts/dnf-reinstall
+```
+4. **Create Symbolic Links:**
+   - Run the symlink creation script to link the actual configuration files to their expected locations:
+```
+./scripts/config-symlinks
+```
+**Note**: This guide is primarily for personal use but can serve as inspiration. It assumes familiarity with Linux systems 
+and configuration management. Always adapt and modify the configurations and scripts to suit your system and 
+preferences.
