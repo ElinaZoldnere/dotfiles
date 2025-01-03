@@ -32,8 +32,8 @@ if [ -f /usr/share/git-core/contrib/completion/git-prompt.sh ]; then
     source /usr/share/git-core/contrib/completion/git-prompt.sh
 fi
 
-# Set PS1 with git branch information
-PS1='\[\033[01;32m\]\u@\h\[\033[00m\]:\[\033[01;34m\]\w\[\033[38;5;43m\]$(__git_ps1 " (%s)")\[\033[00m\]\$ '
+# Set PS1 with git branch information and add a new line for prompt
+PS1='\[\033[01;32m\]\u@\h\[\033[00m\]:\[\033[01;34m\]\w\[\033[38;5;43m\]$(__git_ps1 " (%s)")\[\033[00m\]\n\$ '
 
 # Enable Git completion
 if [ -f /usr/share/git-core/contrib/completion/git-completion.bash ]; then
