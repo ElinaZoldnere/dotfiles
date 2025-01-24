@@ -9,8 +9,11 @@ sudo dnf install -y i3 i3status i3lock dmenu alacritty dunst xsecurelock lightdm
 # Localization
 sudo dnf install -y langpacks-lv
 
-# Utilities and tools
-sudo dnf install -y direnv light openssl maven
+# Utilities
+sudo dnf install -y light openssl
+
+# Development tools
+sudo dnf install -y direnv maven the_silver_searcher
 
 # Docker and dependencies
 sudo dnf config-manager --add-repo=https://download.docker.com/linux/fedora/docker-ce.repo
@@ -19,5 +22,9 @@ sudo dnf install -y docker-ce docker-ce-cli containerd.io docker-buildx-plugin
 # Zoom
 sudo dnf config-manager --add-repo=https://zoom.us/linux/rpm
 sudo dnf install -y zoom
+
+# Discord
+sudo dnf install https://download1.rpmfusion.org/nonfree/fedora/rpmfusion-nonfree-release-$(rpm -E %fedora).noarch.rpm
+sudo dnf install -y discord
 
 echo "Installation completed."
