@@ -10,7 +10,7 @@ sudo dnf install -y i3 i3status i3lock dmenu alacritty dunst xsecurelock lightdm
 sudo dnf install -y langpacks-lv
 
 # Utilities
-sudo dnf install -y light openssl
+sudo dnf install -y light openssl flameshot
 
 # Development tools
 sudo dnf install -y direnv maven the_silver_searcher
