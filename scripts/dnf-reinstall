@@ -13,7 +13,15 @@ sudo dnf install -y langpacks-lv
 sudo dnf install -y light openssl flameshot
 
 # Development tools
-sudo dnf install -y direnv maven the_silver_searcher
+sudo dnf install -y direnv maven the_silver_searcher ruby ruby-devel redhat-rpm-config make gcc-c++
+
+# JS tools
+sudo dnf install -y nodejs npm
+sudo npm install -g dotenv-cli
+
+# Grafana k6 CLI
+sudo dnf install -y https://dl.k6.io/rpm/repo.rpm
+sudo dnf install -y k6
 
 # Docker and dependencies
 sudo dnf config-manager --add-repo=https://download.docker.com/linux/fedora/docker-ce.repo
@@ -26,5 +34,12 @@ sudo dnf install -y zoom
 # Discord
 sudo dnf install https://download1.rpmfusion.org/nonfree/fedora/rpmfusion-nonfree-release-$(rpm -E %fedora).noarch.rpm
 sudo dnf install -y discord
+
+# MySQL
+sudo dnf install -y https://dev.mysql.com/get/mysql80-community-release-fc40-1.noarch.rpm
+sudo dnf install -y mysql-community-server
+sudo systemctl start mysqld
+echo "Temporary root password:"
+sudo grep 'temporary password' /var/log/mysqld.log
 
 echo "Installation completed."
