@@ -13,7 +13,7 @@ sudo dnf install -y langpacks-lv
 sudo dnf install -y light openssl flameshot
 
 # Development tools
-sudo dnf install -y direnv maven the_silver_searcher ruby ruby-devel redhat-rpm-config make gcc-c++
+sudo dnf install -y direnv maven the_silver_searcher fd-find ruby ruby-devel redhat-rpm-config make gcc-c++
 
 # JS tools
 sudo dnf install -y nodejs npm
