@@ -1,0 +1,10 @@
+#!/bin/bash
+LOCK=xsecurelock
+
+set -e
+
+if pgrep -x "zoom" > /dev/null ; then
+  exit 0
+fi
+
+exec $LOCK

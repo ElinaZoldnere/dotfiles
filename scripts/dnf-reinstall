@@ -4,7 +4,7 @@
 echo "Reinstalling packages..."
 
 # Window manager and related tools
-sudo dnf install -y i3 i3status i3lock dmenu alacritty dunst xsecurelock lightdm
+sudo dnf install -y i3 i3status dmenu alacritty dunst xsecurelock lightdm
 
 # Localization
 sudo dnf install -y langpacks-lv
