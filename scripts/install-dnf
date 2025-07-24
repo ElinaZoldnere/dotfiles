@@ -1,7 +1,6 @@
 #!/bin/bash
 
-# Reinstall packages manually installed via dnf
-echo "Reinstalling packages..."
+echo "Starting DNF setup..."
 
 # Window manager and related tools
 sudo dnf install -y i3 i3status dmenu alacritty dunst xsecurelock lightdm
@@ -42,4 +41,4 @@ sudo systemctl start mysqld
 echo "Temporary root password:"
 sudo grep 'temporary password' /var/log/mysqld.log
 
-echo "Installation completed."
+echo "DNF setup completed"
