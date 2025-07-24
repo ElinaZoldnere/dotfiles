@@ -40,3 +40,7 @@ if [ -f /usr/share/git-core/contrib/completion/git-completion.bash ]; then
     source /usr/share/git-core/contrib/completion/git-completion.bash
 fi
 
+
+#THIS MUST BE AT THE END OF THE FILE FOR SDKMAN TO WORK!!!
+export SDKMAN_DIR="$HOME/.sdkman"
+[[ -s "$HOME/.sdkman/bin/sdkman-init.sh" ]] && source "$HOME/.sdkman/bin/sdkman-init.sh"

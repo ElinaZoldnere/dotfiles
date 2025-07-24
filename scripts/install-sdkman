@@ -1,0 +1,18 @@
+#!/bin/bash
+
+echo "Starting SDK setup..."
+
+# Install SDKMAN if not already installed
+if [ ! -d "$HOME/.sdkman" ]; then
+  echo "Installing SDKMAN..."
+  curl -s "https://get.sdkman.io" | bash
+fi
+
+# Ensure SDKMAN is sourced
+source "$HOME/.sdkman/bin/sdkman-init.sh"
+
+# Install specific Groovy
+sdk install groovy 3.0.21 --yes
+
+echo "SDK setup completed"
+
